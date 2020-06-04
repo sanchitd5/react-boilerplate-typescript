@@ -1,12 +1,24 @@
+/***
+* Created by Sanchit Dang :  5 June 2020
+* sanchitd5@github.com
+***/
+import "models";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import 'styles';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+
+const customHistory = createBrowserHistory();
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={customHistory}>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

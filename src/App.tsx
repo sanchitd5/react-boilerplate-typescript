@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/***
+* Created by Sanchit Dang :  5 June 2020
+* sanchitd5@github.com
+***/
 
-function App() {
+import React, { useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
+import { Routes } from "bricks";
+import { ContextManager } from "contexts";
+const App = () => {
+  useEffect(() => {
+    document.title = process.env.REACT_APP_NAME;
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextManager>
+      <Routes />
+    </ContextManager>
   );
 }
 
-export default App;
+export default withRouter(App);
