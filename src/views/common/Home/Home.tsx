@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { Image } from 'components';
-export const Home = () => {
+
+export const Home: FunctionComponent = () => {
     return (
         <Grid container justify='flex-start' direction='column' alignItems='center'>
             <Grid item xs={12} xl={2} lg={4} md={6} sm={8}>

@@ -3,11 +3,13 @@
 * sanchitd5@github.com
 ***/
 
-import React, { useEffect } from 'react';
+import React, { useEffect, FunctionComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Routes } from "bricks";
 import { ContextManager } from "contexts";
-const App = () => {
+
+
+const App: FunctionComponent = () => {
   useEffect(() => {
     document.title = process.env.REACT_APP_NAME;
   }, []);
